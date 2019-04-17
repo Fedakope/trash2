@@ -11,7 +11,7 @@
     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
     <div class="card-product-infos">
       <h2><%= post.title %></h2>
-      <p>by : <%= post.user.email %><strong> sur :<%= post.character.firstname %></strong></p>
+      <p>by : <%= post.user.firstname %><strong> sur : <%= post.character.firstname %></strong> à l'épisode : <%= post.episode %></p>
     </div>
   </div>
 <% end %>
