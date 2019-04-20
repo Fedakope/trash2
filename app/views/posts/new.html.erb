@@ -3,4 +3,7 @@
 
 <%= render 'form', post: @post %>
 
-<%= link_to 'Back', posts_path %>
+<div class="new">
+<%= link_to posts_path do  %>
+<button type="button" class="btn-lg btn-outline-primary">Retour</button>
+<% end %>

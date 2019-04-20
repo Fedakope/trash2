@@ -10,7 +10,8 @@
     <%= f.association :user, :collection => User.all, :label_method => :firstname, :value_method => :id, label: "🔎 Et enfin, qui es-tu ? " %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-actions" style="border: solid 2px black; ">
+    <%= f.button :submit, label: "Envoyer ma prédiction !" %>
   </div>
 <% end %>
+
