@@ -21,6 +21,8 @@
       <h2><%= post.title %></h2>
       <p>Prédit par : <strong><%= post.user.firstname %>,</strong> à l'épisode : <strong><%= post.episode %></strong></p>
       <p>Status : <%= post.status %></p>
+      <p><%= link_to 'modifier', edit_post_path(post) %></p>
+      <p><%= link_to 'supprimer', post, method: :delete, data: { confirm: 'Sur ??' } %></p>
     </div>
     <div class="avatar" style="position: absolute; right: 120px; border-radius: 50%;">
         <%= image_tag post.user.picture, class: 'avatar', style:'width: 90px;' %>
@@ -35,6 +37,8 @@
       <h2><%= post.title %></h2>
       <p>Prédit par : <strong><%= post.user.firstname %>,</strong> à l'épisode : <strong><%= post.episode %></strong></p>
       <p>Status : <%= post.status %></p>
+      <p><%= link_to 'modifier', edit_post_path(post) %></p>
+      <p><%= link_to 'supprimer', post, method: :delete, data: { confirm: 'Sur ??' } %></p>
     </div>
     <div class="avatar" style="position: absolute; right: 120px; border-radius: 50%;">
         <%= image_tag post.user.picture, class: 'avatar', style:'width: 90px;' %>
@@ -49,6 +53,8 @@
       <h2><%= post.title %></h2>
       <p>Prédit par : <strong><%= post.user.firstname %>,</strong> à l'épisode : <strong><%= post.episode %></strong></p>
       <p>Status : <%= post.status %></p>
+      <p><%= link_to 'modifier', edit_post_path(post) %></p>
+      <p><%= link_to 'supprimer', post, method: :delete, data: { confirm: 'Sur ??' } %></p>
     </div>
     <div class="avatar" style="position: absolute; right: 120px; border-radius: 50%;">
         <%= image_tag post.user.picture, class: 'avatar', style:'width: 90px;' %>
