@@ -8,6 +8,11 @@
     <%= f.input :title, label: "🤔 Que va-t-il se passer ?" %>
     <%= f.input :episode, collection: (1..6).to_a, label: "⚡️ Point bonus : pendant quel épisode va se réaliser ta prédiction ?"  %>
     <%= f.association :user, :collection => User.all, :label_method => :firstname, :value_method => :id, label: "🔎 Et enfin, qui es-tu ? " %>
+    <% if user_signed_in? %>
+    <h1>Modification du status :</h1>
+    <%= f.input :status, label: "Nouveau status ? (En cours..., Gagné, Perdu)", collection: ['En cours...', 'Gagné', 'Perdu'] %>
+    <%= f.input :point, label: "Combien de points ? 0, 1 ou 2", collection: 0..2 %>
+    <% end %>
   </div>
 
   <div class="form-actions" style="border: solid 2px black; ">

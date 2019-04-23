@@ -15,35 +15,40 @@
 
 <% @posts.each do |post| %>
           <% if post.point == 2 %>
-  <div class="card-product" style="border: 2px solid #19da84;">
+  <div class="card-product">
     <%= image_tag post.character.picture, style:'object-fit: contain;' %>
     <div class="card-product-infos">
       <h2><%= post.title %></h2>
       <p>Prédit par : <strong><%= post.user.firstname %>,</strong> à l'épisode : <strong><%= post.episode %></strong></p>
       <p>Status : <%= post.status %></p>
-      <p><%= link_to 'modifier', edit_post_path(post) %></p>
-      <p><%= link_to 'supprimer', post, method: :delete, data: { confirm: 'Sur ??' } %></p>
+      <div class="teston d-block d-sm-none" style="background-color: rgba(212, 231, 39, 0.54); border: 2px solid grey;border-radius: 10px; width: 70px; padding: 0px; text-align: center;"><p><%= post.point %> Points</p></div>
+
+      <% if user_signed_in? %>
+      <p><%= link_to 'modifier', edit_post_path(post) %>, <%= link_to 'supprimer', post, method: :delete, data: { confirm: 'Sur ??' } %>
+</p> <% end %>
     </div>
-    <div class="avatar" style="position: absolute; right: 120px; border-radius: 50%;">
+    <div class="avatar d-none d-sm-block" style="position: absolute; right: 120px; border-radius: 50%;">
         <%= image_tag post.user.picture, class: 'avatar', style:'width: 90px;' %>
     </div>
-    <div class="points" style="position: absolute; right: 250px; padding: 15px; border: 2px solid grey; letter-spacing: 1px; border-radius: 10px;"><%= post.point %> Points</div>
+    <div class="points d-none d-sm-block" style="background-color: rgba(212, 231, 39, 0.54); border: 2px solid grey; position: absolute; right: 250px; padding: 15px; letter-spacing: 1px; border-radius: 10px;"><%= post.point %> Points</div>
   </div>
 
           <% elsif post.point == 1 %>
-  <div class="card-product" style="border: 2px solid #8b7dec;">
+  <div class="card-product">
     <%= image_tag post.character.picture, style:'object-fit: contain;' %>
     <div class="card-product-infos">
       <h2><%= post.title %></h2>
       <p>Prédit par : <strong><%= post.user.firstname %>,</strong> à l'épisode : <strong><%= post.episode %></strong></p>
       <p>Status : <%= post.status %></p>
-      <p><%= link_to 'modifier', edit_post_path(post) %></p>
-      <p><%= link_to 'supprimer', post, method: :delete, data: { confirm: 'Sur ??' } %></p>
+      <div class="teston d-block d-sm-none" style="background-color: rgba(68, 233, 53, 0.54); border: 2px solid grey;border-radius: 10px; width: 70px; padding: 0px; text-align: center;"><p><%= post.point %> Points</p></div>
+<% if user_signed_in? %>
+      <p><%= link_to 'modifier', edit_post_path(post) %>, <%= link_to 'supprimer', post, method: :delete, data: { confirm: 'Sur ??' } %>
+</p> <% end %>
     </div>
-    <div class="avatar" style="position: absolute; right: 120px; border-radius: 50%;">
+    <div class="avatar d-none d-sm-block" style="position: absolute; right: 120px; border-radius: 50%;">
         <%= image_tag post.user.picture, class: 'avatar', style:'width: 90px;' %>
     </div>
-    <div class="points" style="position: absolute; right: 250px; padding: 15px; border: 2px solid grey; letter-spacing: 1px; border-radius: 10px;"><%= post.point %> Points</div>
+    <div class="points d-none d-sm-block" style="background-color: rgba(68, 233, 53, 0.54); position: absolute; right: 250px; padding: 15px; border: 2px solid grey; letter-spacing: 1px; border-radius: 10px;"><%= post.point %> Points</div>
   </div>
 
           <% else %>
@@ -53,13 +58,15 @@
       <h2><%= post.title %></h2>
       <p>Prédit par : <strong><%= post.user.firstname %>,</strong> à l'épisode : <strong><%= post.episode %></strong></p>
       <p>Status : <%= post.status %></p>
-      <p><%= link_to 'modifier', edit_post_path(post) %></p>
-      <p><%= link_to 'supprimer', post, method: :delete, data: { confirm: 'Sur ??' } %></p>
+      <div class="teston d-block d-sm-none" style="border: 2px solid grey;border-radius: 10px; width: 70px; padding: 0px; text-align: center;"><p><%= post.point %> Points</p></div>
+<% if user_signed_in? %>
+      <p><%= link_to 'modifier', edit_post_path(post) %>, <%= link_to 'supprimer', post, method: :delete, data: { confirm: 'Sur ??' } %>
+</p> <% end %>
     </div>
-    <div class="avatar" style="position: absolute; right: 120px; border-radius: 50%;">
+    <div class="avatar d-none d-sm-block" style="position: absolute; right: 120px; border-radius: 50%;">
         <%= image_tag post.user.picture, class: 'avatar', style:'width: 90px;' %>
     </div>
-    <div class="points" style="position: absolute; right: 250px; padding: 15px; border: 2px solid grey; letter-spacing: 1px; border-radius: 10px;"><%= post.point %> Points</div>
+    <div class="points d-none d-sm-block" style="position: absolute; right: 250px; padding: 15px; border: 2px solid grey; letter-spacing: 1px; border-radius: 10px;"><%= post.point %> Points</div>
   </div>
 <% end %>
           <% end %>
