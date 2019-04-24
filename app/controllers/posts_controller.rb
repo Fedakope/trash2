@@ -7,6 +7,38 @@ class PostsController < ApplicationController
   def index
     @posts = Post.order( created_at: :desc )
     @users = User.all
+
+    @nilscore1 = Post.where(user_id: User.find_by_firstname('Nil'), point: 1).count
+    @nilscore2 = Post.where(user_id: User.find_by_firstname('Nil'), point: 2).count
+    @nilscore = @nilscore1 + 2 * @nilscore2
+
+    @camscore1 = Post.where(user_id: User.find_by_firstname('Camille'), point: 1).count
+    @camscore2 = Post.where(user_id: User.find_by_firstname('Camille'), point: 2).count
+    @camscore = @camscore1 + 2 * @camscore2
+
+    @laurinescore1 = Post.where(user_id: User.find_by_firstname('Laurine'), point: 1).count
+    @laurinescore2 = Post.where(user_id: User.find_by_firstname('Laurine'), point: 2).count
+    @laurinescore = @laurinescore1 + 2 * @laurinescore2
+
+    @gautierscore1 = Post.where(user_id: User.find_by_firstname('Gautier'), point: 1).count
+    @gautierscore2 = Post.where(user_id: User.find_by_firstname('Gautier'), point: 2).count
+    @gautierscore = @gautierscore1 + 2 * @gautierscore2
+
+    @juliescore1 = Post.where(user_id: User.find_by_firstname('Julie'), point: 1).count
+    @juliescore2 = Post.where(user_id: User.find_by_firstname('Julie'), point: 2).count
+    @juliescore = @juliescore1 + 2 * @juliescore2
+
+    @helenescore1 = Post.where(user_id: User.find_by_firstname('Helene'), point: 1).count
+    @helenescore2 = Post.where(user_id: User.find_by_firstname('Helene'), point: 2).count
+    @helenescore = @helenescore1 + 2 * @helenescore2
+
+    @loicscore1 = Post.where(user_id: User.find_by_firstname('Loic'), point: 1).count
+    @loicscore2 = Post.where(user_id: User.find_by_firstname('Loic'), point: 2).count
+    @loicscore = @loicscore1 + 2 * @loicscore2
+
+    @christophescore1 = Post.where(user_id: User.find_by_firstname('Christophe'), point: 1).count
+    @christophescore2 = Post.where(user_id: User.find_by_firstname('Christophe'), point: 2).count
+    @christophescore = @christophescore1 + 2 * @christophescore2
   end
 
   # GET /posts/1

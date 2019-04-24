@@ -1,9 +1,33 @@
 <p id="notice"><%= notice %></p>
-<h1>Classement copains</h1>
-<i>Coming soon...</i>
+
 <div class="classement">
+<h1>Classement copains</h1>
+<% if @nilscore > 0 %>
+<p>Nil : <%= @nilscore  %></p>
+<% end %>
+<% if @camscore > 0 %>
+<p>Camille : <%= @camscore %></p>
+<% end %>
+<% if @laurinescore > 0 %>
+<p>Laurine : <%= @laurinescore %></p>
+<% end %>
+<% if @gautierscore > 0 %>
+<p>Gautier : <%= @gautierscore  %></p>
+<% end %>
+<% if @juliescore > 0 %>
+<p>Julie : <%= @juliescore  %></p>
+<% end %>
+<% if @helenescore > 0 %>
+<p>Hélène : <%= @helenescore  %></p> 
+<% end %>
+<% if @loicscore > 0 %>
+<p>Loic : <%= @loicscore %></p>
+<% end %>
+<% if @christophescore > 0 %>
+<p>Christophe : <%= @christophescore  %></p>
+<% end %>
 </div>
-<br>
+
 <h1>Prédicitions</h1>
 
 <div class="new">
@@ -88,10 +112,14 @@
 <h1>To do </h1>
   <ul>
     <li>Design </li>
-    <li>Compteur de points </li>
-    <li>Ajouter 'cela ne concerne pas un personnafge en particulier'</li>
-    <li>Border color selon le status</li>
-    <li>Responsivity</li>
+    <li>Ajouter 'cela ne concerne pas un personnage en particulier'</li>
     <li>Replace form by thumbnails</li>
-    <li>...</li>
+    <li>auto-sort ranking</li>
   </ul>
+
+
+
+
+
+
+

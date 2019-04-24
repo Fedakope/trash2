@@ -461,6 +461,36 @@ post12 = Post.new(
     )
 post12.save!
 
+post13 = Post.new(
+    title: "Bran va révèler à Jon Snow que c'est Jaime qui l'a poussé",
+    user_id: User.find_by_firstname('Camille').id,
+    episode: "2",
+    character_id: Character.find_by_firstname('Bran Stark').id,
+    status: "En cours...",
+    point: 0
+    )
+post13.save!
+
+post14 = Post.new(
+    title: "Jon va révéler à Daenerys qu'il est le fils Targaryen",
+    user_id: User.find_by_firstname('Camille').id,
+    episode: "5",
+    character_id: Character.find_by_firstname('Jon Snow').id,
+    status: "En cours...",
+    point: 0
+    )
+post14.save!
+
+post15 = Post.new(
+    title: "Jon va révéler à Daenerys qu'il est le fils Targaryen",
+    user_id: User.find_by_firstname('Camille').id,
+    episode: "5",
+    character_id: Character.find_by_firstname('Jon Snow').id,
+    status: "En cours...",
+    point: 0
+    )
+post15.save!
+
 puts 'Posts created !'
 
 
