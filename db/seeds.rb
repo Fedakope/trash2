@@ -476,8 +476,8 @@ post14 = Post.new(
     user_id: User.find_by_firstname('Camille').id,
     episode: "5",
     character_id: Character.find_by_firstname('Jon Snow').id,
-    status: "En cours...",
-    point: 0
+    status: "Gagné",
+    point: 2
     )
 post14.save!
 
@@ -536,8 +536,8 @@ post19 = Post.new(
     user_id: User.find_by_firstname('Camille').id,
     episode: "2",
     character_id: Character.find_by_firstname('Ghost').id,
-    status: "En cours...",
-    point: 0
+    status: "Gagné",
+    point: 2
     )
 post19.save!
 
@@ -551,6 +551,25 @@ post20 = Post.new(
     )
 post20.save!
 
+post21 = Post.new(
+    title: "Le Limier tue son frère mort-vivant avec sa hache en verre-dragon",
+    user_id: User.find_by_firstname('Nil').id,
+    episode: "6",
+    character_id: Character.find_by_firstname('Le Limier').id,
+    status: "En cours...",
+    point: 0
+    )
+post21.save!
+
+post22 = Post.new(
+    title: "Le générique change à mesure que les marcheurs blancs avancent sur Westeros",
+    user_id: User.find_by_firstname('Nil').id,
+    episode: "2",
+    character_id: Character.find_by_firstname('Tyrion Lannister').id,
+    status: "Gagné",
+    point: 2
+    )
+post22.save!
 
 puts 'Posts created !'
 
