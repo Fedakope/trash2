@@ -482,14 +482,75 @@ post14 = Post.new(
 post14.save!
 
 post15 = Post.new(
-    title: "Jon va révéler à Daenerys qu'il est le fils Targaryen",
+    title: "Bronn ne va tuer ni Jaime ni Tyrion",
     user_id: User.find_by_firstname('Camille').id,
     episode: "5",
-    character_id: Character.find_by_firstname('Jon Snow').id,
+    character_id: Character.find_by_firstname('Bronn').id,
     status: "En cours...",
     point: 0
     )
 post15.save!
+
+post16 = Post.new(
+    title: "Bronn ne va tuer ni Jaime ni Tyrion",
+    user_id: User.find_by_firstname('Nil').id,
+    episode: "5",
+    character_id: Character.find_by_firstname('Bronn').id,
+    status: "En cours...",
+    point: 0
+    )
+post16.save!
+
+post17 = Post.new(
+    title: "Rhaegal va se faire tuer",
+    user_id: User.find_by_firstname('Nil').id,
+    episode: "6",
+    character_id: Character.find_by_firstname('Rhaegal').id,
+    status: "En cours...",
+    point: 0
+    )
+post17.save!
+
+post17 = Post.new(
+    title: "Nymeria va sauver Arya dans la bataille contre les marcheurs blancs",
+    user_id: User.find_by_firstname('Camille').id,
+    episode: "3",
+    character_id: Character.find_by_firstname('Nymeria').id,
+    status: "En cours...",
+    point: 0
+    )
+post17.save!
+
+post18 = Post.new(
+    title: "Jaime va dire toute la verité sur le Roi Fou à Daenerys",
+    user_id: User.find_by_firstname('Camille').id,
+    episode: "2",
+    character_id: Character.find_by_firstname('Jaime Lannister').id,
+    status: "En cours...",
+    point: 0
+    )
+post18.save!
+
+post19 = Post.new(
+    title: "Ghost revient auprès de Jon Snow",
+    user_id: User.find_by_firstname('Camille').id,
+    episode: "2",
+    character_id: Character.find_by_firstname('Ghost').id,
+    status: "En cours...",
+    point: 0
+    )
+post19.save!
+
+post20 = Post.new(
+    title: "Brienne tue un lieutenant Marcheur Blanc",
+    user_id: User.find_by_firstname('Camille').id,
+    episode: "3",
+    character_id: Character.find_by_firstname('Brienne').id,
+    status: "En cours...",
+    point: 0
+    )
+post20.save!
+
 
 puts 'Posts created !'
 
