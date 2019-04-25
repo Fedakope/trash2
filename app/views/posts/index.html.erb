@@ -34,7 +34,10 @@
 <%= link_to new_post_path do  %>
 <button type="button" class="btn-lg btn-outline-primary">Nouvelle prédiction</button>
 <% end %>
+</div>
 
+<div class="paginate" style="border: solid 1px grey; border-radius: 10px; padding: 15px; background-color: white; margin-top: 20px;">
+<%= paginate @posts %>
 </div>
 
 <% @posts.each do |post| %>
@@ -108,19 +111,9 @@
     <li><strong>Faire une ou plusieurs prédiction(s) concernant un personage de la série</strong></li>
     <li>Prédiction réalisée = 1 point</li>
     <li>Prédicition réalisée <strong>au bon épisode</strong> = 2 points</li>
-    <li>Prédiction non-realsiée = 0 points</li>
+    <li>Prédiction non-realisée = 0 points</li>
   </ul>
 </div>
-
-<h1>To do </h1>
-  <ul>
-    <li>Design </li>
-    <li>Ajouter 'cela ne concerne pas un personnage en particulier'</li>
-    <li>Replace form by thumbnails</li>
-    <li>auto-sort ranking</li>
-  </ul>
-
-
 
 
 
