@@ -31,10 +31,10 @@ en:
     #     age: 'Select your age'
   views:
     pagination:
-      first: "&laquo; Première"
-      last: "Dernière &raquo;"
-      previous: "&lsaquo; Précédente"
-      next: "Suivante &rsaquo;"
+      first: "Première"
+      last: "Dernière"
+      previous: "Précédente"
+      next: "Suivante"
       truncate: "&hellip;"
   helpers:
     page_entries_info:
