@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.order( created_at: :desc )
+    @posts = Post.order( created_at: :desc ).page(params[:page]).per(20)
     @users = User.all
 
     @nilscore1 = Post.where(user_id: User.find_by_firstname('Nil'), point: 1).count
